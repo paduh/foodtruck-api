@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../src/config/index.js"],"names":[],"mappings":";;;;;kBAAc;AACZ,UAAQ,IADI;AAEZ,cAAY,0CAFA;AAGZ,eAAa;AAHD,C","file":"index.js","sourcesContent":["export default{\n  \"port\": 3005,\n  \"mongoUrl\": \"mongodb://localhost:27017/restaurant-api\",\n  \"bodyLimit\": \"100kb\"\n}\n"]}
