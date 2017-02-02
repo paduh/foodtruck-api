@@ -47,5 +47,9 @@
     "babel-preset-stage-0": "^6.22.0",
     "eslint": "^3.14.1",
     "nodemon": "^1.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paduh/foodtruck-api"
   }
 }
