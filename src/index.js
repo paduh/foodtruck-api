@@ -27,12 +27,12 @@ passport.use(new LocalStrategy({
   passwordField: 'password'
 },
   Account.authenticate()
-))
+));
 passport.serializeUser(Account.serializeUser());
 passport.deserializeUser(Account.deserializeUser());
 
 //API Routes V1
-app.use('/v1', routes);
+app.use('/api/v1', routes);
 
 app.server.listen(config.port);
 console.log(`Started on port ${app.server.address().port}`);

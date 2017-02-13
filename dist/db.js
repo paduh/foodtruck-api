@@ -15,6 +15,7 @@ var _config2 = _interopRequireDefault(_config);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = function (callback) {
+  _mongoose2.default.promise = global.promise;
   var db = _mongoose2.default.connect(_config2.default.mongoUrl);
   callback(db);
 };

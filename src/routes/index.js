@@ -18,6 +18,7 @@ initializedDb(db => {
   router.use('/foodtruck', foodtruck({ config, db }));
   router.use('/account', account({ config, db }));
 
+
 });
 
 export default router;

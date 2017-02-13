@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import FoodTruck from './foodtruck';
+import Report from './report';
 let Schema = mongoose.Schema;
 
 let ReviewSchema = new Schema({
@@ -13,6 +14,8 @@ let ReviewSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'FoodTruck',
     required: true
-  }
+  },
+
+  reports: [{type: Schema.Types.ObjectId, ref: 'Report'}]
 });
 module.exports =  mongoose.model('Review', ReviewSchema);

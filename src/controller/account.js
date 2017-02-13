@@ -22,7 +22,7 @@ export default ({ config, db}) => {
         username: req.body.email
       }), req.body.password, function(err, account) {
         if(err){
-          res.send(err);
+            return res.status(500).send('An error occured:' + err);
         }
         passport.authenticate(
           'local', {
@@ -33,16 +33,12 @@ export default ({ config, db}) => {
       });
     });
 
-
   //'v1/account/login'
   api.post('/login', passport.authenticate(
     'local', {
       session: false,
       scope: []
     }), generateAccessToken, respond);
-
-
-
 
   //'v1/account/logout'
 
